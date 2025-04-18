@@ -13,6 +13,8 @@ export function getAuthToken() {
     
     const token = localStorage.getItem('token')
 
+    if(!token) return null
+
     const tokenDuartion = getTokenDuration()
 
     if(tokenDuartion < 0) {
